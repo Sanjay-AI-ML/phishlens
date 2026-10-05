@@ -1,0 +1,11 @@
+ordinary-qr
+https://portal.campus.example/notices
+
+deceptive-qr
+https://campus.example@other.example/login
+
+hidden-destination-qr
+https://portal.campus.example/continue?next=https%3A%2F%2Fcampus.example%40other.example%2Flogin
+
+ambiguous-qr
+https://short.example/abc123

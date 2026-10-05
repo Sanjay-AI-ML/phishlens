@@ -1,0 +1,37 @@
+{
+  "name": "phishlens",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline URL inspection and evidence-grounded local explanations.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "npm run typecheck && node scripts/license-notices.mjs && vite build && node scripts/build-server.mjs",
+    "start": "node dist-server/server.mjs",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm test && npm run build && npm run test:e2e"
+  },
+  "dependencies": {
+    "jsqr": "1.4.0",
+    "punycode": "2.3.1",
+    "tldts": "7.4.16"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.4",
+    "@types/punycode": "2.1.4",
+    "@types/qrcode": "1.5.6",
+    "esbuild": "0.28.2",
+    "qrcode": "1.5.4",
+    "typescript": "7.0.2",
+    "vite": "8.3.2",
+    "vitest": "5.0.3"
+  }
+}
